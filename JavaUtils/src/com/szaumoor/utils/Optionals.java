@@ -1,0 +1,553 @@
+package com.szaumoor.utils;
+
+import java.util.Arrays;
+import java.util.Optional;
+
+/**
+ * Utility class that provides functions designed to test optional values with different types of logical operations.
+ */
+public enum Optionals {
+    ;
+    /**
+     * Determines if both optional values are present.
+     *
+     * @param  op1 the first optional value
+     * @param  op2 the second optional value
+     * @return     true if both optional values are present, false otherwise
+     */
+    public static boolean allPresent(final Optional<?> op1, final Optional<?> op2) {
+        return op1.isPresent() && op2.isPresent();
+    }
+    /**
+     * Check if all three optional parameters are present.
+     *
+     * @param  op1    the first optional parameter
+     * @param  op2    the second optional parameter
+     * @param  op3    the third optional parameter
+     * @return        true if all three optional parameters are present, false otherwise
+     */
+    public static boolean allPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3) {
+        return op1.isPresent() && op2.isPresent() && op3.isPresent();
+    }
+
+    public static boolean allPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4) {
+        return op1.isPresent() && op2.isPresent() && op3.isPresent() && op4.isPresent();
+    }
+    /**
+     * Checks if all the optional values are present.
+     *
+     * @param  op1	the first optional value
+     * @param  op2	the second optional value
+     * @param  op3	the third optional value
+     * @param  op4	the fourth optional value
+     * @return         	true if all optional values are present, false otherwise
+     */
+    public static boolean allPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5) {
+        return op1.isPresent() && op2.isPresent() && op3.isPresent() && op4.isPresent() && op5.isPresent();
+    }
+    /**
+     * Checks if all the optional parameters are present.
+     *
+     * @param  op1  the first optional parameter
+     * @param  op2  the second optional parameter
+     * @param  op3  the third optional parameter
+     * @param  op4  the fourth optional parameter
+     * @param  op5  the fifth optional parameter
+     * @param  op6  the sixth optional parameter
+     * @return      true if all the optional parameters are present, false otherwise
+     */
+    public static boolean allPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6) {
+        return op1.isPresent() && op2.isPresent() && op3.isPresent() && op4.isPresent() && op5.isPresent() && op6.isPresent();
+    }
+    /**
+     * Determines if all the given Optional parameters are present.
+     *
+     * @param  op1 the first Optional parameter
+     * @param  op2 the second Optional parameter
+     * @param  op3 the third Optional parameter
+     * @param  op4 the fourth Optional parameter
+     * @param  op5 the fifth Optional parameter
+     * @param  op6 the sixth Optional parameter
+     * @param  op7 the seventh Optional parameter
+     * @return     true if all the Optional parameters are present, false otherwise
+     */
+    public static boolean allPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7) {
+        return op1.isPresent() && op2.isPresent() && op3.isPresent() && op4.isPresent() && op5.isPresent() && op6.isPresent() && op7.isPresent();
+    }
+
+    public static boolean allPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8) {
+        return op1.isPresent() && op2.isPresent() && op3.isPresent() && op4.isPresent() && op5.isPresent() && op6.isPresent() && op7.isPresent() &&
+                op8.isPresent();
+    }
+    /**
+     * Checks if all the given optional values are present.
+     *
+     * @param  op1  the first optional value
+     * @param  op2  the second optional value
+     * @param  op3  the third optional value
+     * @param  op4  the fourth optional value
+     * @param  op5  the fifth optional value
+     * @param  op6  the sixth optional value
+     * @param  op7  the seventh optional value
+     * @param  op8  the eighth optional value
+     * @return      true if all optional values are present, false otherwise
+     */
+    public static boolean allPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8, final Optional<?> op9) {
+        return op1.isPresent() && op2.isPresent() && op3.isPresent() && op4.isPresent() && op5.isPresent() && op6.isPresent() && op7.isPresent() &&
+                op8.isPresent() && op9.isPresent();
+    }
+    /**
+     * Checks if all the given optional parameters are present.
+     *
+     * @param  op1  the first optional parameter
+     * @param  op2  the second optional parameter
+     * @param  op3  the third optional parameter
+     * @param  op4  the fourth optional parameter
+     * @param  op5  the fifth optional parameter
+     * @param  op6  the sixth optional parameter
+     * @param  op7  the seventh optional parameter
+     * @param  op8  the eighth optional parameter
+     * @param  op9  the ninth optional parameter
+     * @param  op10 the tenth optional parameter
+     * @return      true if all the optional parameters are present, false otherwise
+     */
+    public static boolean allPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8, final Optional<?> op9, final Optional<?> op10) {
+        return op1.isPresent() && op2.isPresent() && op3.isPresent() && op4.isPresent() && op5.isPresent() && op6.isPresent() && op7.isPresent() &&
+                op8.isPresent() && op9.isPresent() && op10.isPresent();
+    }
+    /**
+     * Check if all the given Optional objects are present.
+     *
+     * @param  optionals  the Optional objects to check
+     * @return            true if all the Optional objects are present, false otherwise
+     */
+    public static boolean allPresent(final Optional<?> ... optionals) {
+        return Arrays.stream(optionals).allMatch(Optional::isPresent);
+    }
+    /**
+     * Determines if either of the given optional values is present.
+     *
+     * @param  op1  the first optional value
+     * @param  op2  the second optional value
+     * @return      true if either of the optional values is present, false otherwise
+     */
+    public static boolean anyPresent(final Optional<?> op1, final Optional<?> op2) {
+        return op1.isPresent() || op2.isPresent();
+    }
+    /**
+     * Determines if any of the given optional values are present.
+     *
+     * @param  op1  the first optional value
+     * @param  op2  the second optional value
+     * @param  op3  the third optional value
+     * @return      true if any of the optional values are present, false otherwise
+     */
+    public static boolean anyPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3) {
+        return op1.isPresent() || op2.isPresent() || op3.isPresent();
+    }
+    /**
+     * Determines whether any of the given Optional objects are present.
+     *
+     * @param  op1  the first Optional object
+     * @param  op2  the second Optional object
+     * @param  op3  the third Optional object
+     * @param  op4  the fourth Optional object
+     * @return      true if any of the Optional objects are present, false otherwise
+     */
+    public static boolean anyPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4) {
+        return op1.isPresent() || op2.isPresent() || op3.isPresent() || op4.isPresent();
+    }
+    /**
+     * Checks if any of the given Optional objects are present.
+     *
+     * @param  op1  the first Optional object
+     * @param  op2  the second Optional object
+     * @param  op3  the third Optional object
+     * @param  op4  the fourth Optional object
+     * @param  op5  the fifth Optional object
+     * @return      true if any of the Optional objects are present, false otherwise
+     */
+    public static boolean anyPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5) {
+        return op1.isPresent() || op2.isPresent() || op3.isPresent() || op4.isPresent() || op5.isPresent();
+    }
+    /**
+     * Determines if any of the given optional values are present.
+     *
+     * @param  op1 the first optional value
+     * @param  op2 the second optional value
+     * @param  op3 the third optional value
+     * @param  op4 the fourth optional value
+     * @param  op5 the fifth optional value
+     * @param  op6 the sixth optional value
+     * @return     true if any of the optional values are present, false otherwise
+     */
+    public static boolean anyPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6) {
+        return op1.isPresent() || op2.isPresent() || op3.isPresent() || op4.isPresent() || op5.isPresent() || op6.isPresent();
+    }
+    /**
+     * Checks if any of the given optional values are present.
+     *
+     * @param  op1	the first optional value
+     * @param  op2	the second optional value
+     * @param  op3	the third optional value
+     * @param  op4	the fourth optional value
+     * @param  op5	the fifth optional value
+     * @param  op6	the sixth optional value
+     * @param  op7	the seventh optional value
+     * @return    	true if any of the optional values are present, false otherwise
+     */
+    public static boolean anyPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7) {
+        return op1.isPresent() || op2.isPresent() || op3.isPresent() || op4.isPresent() || op5.isPresent() || op6.isPresent() || op7.isPresent();
+    }
+    /**
+     * Checks if all the given Optional parameters are present.
+     *
+     * @param  op1 the first Optional parameter
+     * @param  op2 the second Optional parameter
+     * @param  op3 the third Optional parameter
+     * @param  op4 the fourth Optional parameter
+     * @param  op5 the fifth Optional parameter
+     * @param  op6 the sixth Optional parameter
+     * @param  op7 the seventh Optional parameter
+     * @param  op8 the eighth Optional parameter
+     * @return true if all the Optional parameters are present, false otherwise
+     */
+    public static boolean anyPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8) {
+        return op1.isPresent() && op2.isPresent() && op3.isPresent() && op4.isPresent() && op5.isPresent() && op6.isPresent() && op7.isPresent() &&
+                op8.isPresent();
+    }
+    /**
+     * Checks if all the given Optional parameters are present.
+     *
+     * @param  op1   the first Optional parameter
+     * @param  op2   the second Optional parameter
+     * @param  op3   the third Optional parameter
+     * @param  op4   the fourth Optional parameter
+     * @param  op5   the fifth Optional parameter
+     * @param  op6   the sixth Optional parameter
+     * @param  op7   the seventh Optional parameter
+     * @param  op8   the eighth Optional parameter
+     * @param  op9   the ninth Optional parameter
+     * @return       true if all the Optional parameters are present, false otherwise
+     */
+    public static boolean anyPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8, final Optional<?> op9) {
+        return op1.isPresent() && op2.isPresent() && op3.isPresent() && op4.isPresent() && op5.isPresent() && op6.isPresent() && op7.isPresent() &&
+                op8.isPresent() && op9.isPresent();
+    }
+    /**
+     * Checks if all the given Optional objects are present.
+     *
+     * @param  op1  the first Optional object
+     * @param  op2  the second Optional object
+     * @param  op3  the third Optional object
+     * @param  op4  the fourth Optional object
+     * @param  op5  the fifth Optional object
+     * @param  op6  the sixth Optional object
+     * @param  op7  the seventh Optional object
+     * @param  op8  the eighth Optional object
+     * @param  op9  the ninth Optional object
+     * @param  op10 the tenth Optional object
+     * @return      true if all the Optional objects are present, false otherwise
+     */
+    public static boolean anyPresent(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8, final Optional<?> op9, final Optional<?> op10) {
+        return op1.isPresent() && op2.isPresent() && op3.isPresent() && op4.isPresent() && op5.isPresent() && op6.isPresent() && op7.isPresent() &&
+                op8.isPresent() && op9.isPresent() && op10.isPresent();
+    }
+    /**
+     * Checks if any of the given optionals are present.
+     *
+     * @param  optionals  the optionals to check
+     * @return            true if any of the optionals are present, false otherwise
+     */
+    public static boolean anyPresent(final Optional<?> ... optionals) {
+        return Arrays.stream(optionals).anyMatch(Optional::isPresent);
+    }
+    /**
+     * Determines if both Optional objects are empty.
+     *
+     * @param  op1  the first Optional object
+     * @param  op2  the second Optional object
+     * @return      true if both Optional objects are empty, false otherwise
+     */
+    public static boolean allEmpty(final Optional<?> op1, final Optional<?> op2) {
+        return op1.isEmpty() && op2.isEmpty();
+    }
+    /**
+     * Determines if all the given Optional objects are empty.
+     *
+     * @param  op1	the first Optional object
+     * @param  op2	the second Optional object
+     * @param  op3	the third Optional object
+     * @return     	true if all the given Optional objects are empty, false otherwise
+     */
+    public static boolean allEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3) {
+        return op1.isEmpty() && op2.isEmpty() && op3.isEmpty();
+    }
+    /**
+     * Determines if all the given Optional objects are empty.
+     *
+     * @param  op1   the first Optional object
+     * @param  op2   the second Optional object
+     * @param  op3   the third Optional object
+     * @param  op4   the fourth Optional object
+     * @return       true if all the Optional objects are empty, false otherwise
+     */
+    public static boolean allEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4) {
+        return op1.isEmpty() && op2.isEmpty() && op3.isEmpty() && op4.isEmpty();
+    }
+
+    public static boolean allEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5) {
+        return op1.isEmpty() && op2.isEmpty() && op3.isEmpty() && op4.isEmpty() && op5.isEmpty();
+    }
+    /**
+     * Checks if all the input optional values are empty.
+     *
+     * @param  op1  the first optional value
+     * @param  op2  the second optional value
+     * @param  op3  the third optional value
+     * @param  op4  the fourth optional value
+     * @param  op5  the fifth optional value
+     * @return      true if all the input optional values are empty, false otherwise
+     */
+    public static boolean allEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6) {
+        return op1.isEmpty() && op2.isEmpty() && op3.isEmpty() && op4.isEmpty() && op5.isEmpty() && op6.isEmpty();
+    }
+    /**
+     * Checks if all the given Optional parameters are empty.
+     *
+     * @param  op1  the first Optional parameter
+     * @param  op2  the second Optional parameter
+     * @param  op3  the third Optional parameter
+     * @param  op4  the fourth Optional parameter
+     * @param  op5  the fifth Optional parameter
+     * @param  op6  the sixth Optional parameter
+     * @param  op7  the seventh Optional parameter
+     * @return      true if all the Optional parameters are empty, false otherwise
+     */
+    public static boolean allEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7) {
+        return op1.isEmpty() && op2.isEmpty() && op3.isEmpty() && op4.isEmpty() && op5.isEmpty() && op6.isEmpty() && op7.isEmpty();
+    }
+    /**
+     * Checks if all the given Optional objects are empty.
+     *
+     * @param  op1  the first Optional object
+     * @param  op2  the second Optional object
+     * @param  op3  the third Optional object
+     * @param  op4  the fourth Optional object
+     * @param  op5  the fifth Optional object
+     * @param  op6  the sixth Optional object
+     * @param  op7  the seventh Optional object
+     * @param  op8  the eighth Optional object
+     * @return      true if all the Optional objects are empty, false otherwise
+     */
+    public static boolean allEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8) {
+        return op1.isEmpty() && op2.isEmpty() && op3.isEmpty() && op4.isEmpty() && op5.isEmpty() && op6.isEmpty() && op7.isEmpty() &&
+                op8.isEmpty();
+    }
+    /**
+     * Checks if all the provided Optional parameters are empty.
+     *
+     * @param  op1 the first Optional parameter
+     * @param  op2 the second Optional parameter
+     * @param  op3 the third Optional parameter
+     * @param  op4 the fourth Optional parameter
+     * @param  op5 the fifth Optional parameter
+     * @param  op6 the sixth Optional parameter
+     * @param  op7 the seventh Optional parameter
+     * @param  op8 the eighth Optional parameter
+     * @param  op9 the ninth Optional parameter
+     * @return     true if all the Optional parameters are empty, false otherwise
+     */
+    public static boolean allEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8, final Optional<?> op9) {
+        return op1.isEmpty() && op2.isEmpty() && op3.isEmpty() && op4.isEmpty() && op5.isEmpty() && op6.isEmpty() && op7.isEmpty() &&
+                op8.isEmpty() && op9.isEmpty();
+    }
+    /**
+     * Checks if all the provided Optional parameters are empty.
+     *
+     * @param  op1  the first Optional parameter
+     * @param  op2  the second Optional parameter
+     * @param  op3  the third Optional parameter
+     * @param  op4  the fourth Optional parameter
+     * @param  op5  the fifth Optional parameter
+     * @param  op6  the sixth Optional parameter
+     * @param  op7  the seventh Optional parameter
+     * @param  op8  the eighth Optional parameter
+     * @param  op9  the ninth Optional parameter
+     * @param  op10 the tenth Optional parameter
+     * @return      true if all the Optional parameters are empty, false otherwise
+     */
+    public static boolean allEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8, final Optional<?> op9, final Optional<?> op10) {
+        return op1.isEmpty() && op2.isEmpty() && op3.isEmpty() && op4.isEmpty() && op5.isEmpty() && op6.isEmpty() && op7.isEmpty() &&
+                op8.isEmpty() && op9.isEmpty() && op10.isEmpty();
+    }
+    /**
+     * A function that checks if all the given Optional objects are empty.
+     *
+     * @param  optionals  an array of Optional objects
+     * @return            a boolean value indicating whether all the optionals are empty
+     */
+    public static boolean allEmpty(final Optional<?> ... optionals) {
+        return Arrays.stream(optionals).allMatch(Optional::isEmpty);
+    }
+
+    /**
+     * Determines if either of the given optional values is empty.
+     *
+     * @param  op1  the first optional value
+     * @param  op2  the second optional value
+     * @return      true if either of the optional values is empty, false otherwise
+     */
+    public static boolean anyEmpty(final Optional<?> op1, final Optional<?> op2) {
+        return op1.isEmpty() || op2.isEmpty();
+    }
+    /**
+     * Determines if any of the given Optional objects are empty.
+     *
+     * @param  op1 the first Optional object
+     * @param  op2 the second Optional object
+     * @param  op3 the third Optional object
+     * @return     true if any of the Optional objects are empty, false otherwise
+     */
+    public static boolean anyEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3) {
+        return op1.isEmpty() || op2.isEmpty() || op3.isEmpty();
+    }
+    /**
+     * Checks if any of the given Optional objects are empty.
+     *
+     * @param  op1  the first Optional object to check
+     * @param  op2  the second Optional object to check
+     * @param  op3  the third Optional object to check
+     * @param  op4  the fourth Optional object to check
+     * @return      true if any of the Optional objects are empty, false otherwise
+     */
+    public static boolean anyEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4) {
+        return op1.isEmpty() || op2.isEmpty() || op3.isEmpty() || op4.isEmpty();
+    }
+    /**
+     * Checks if any of the given optional values are empty.
+     *
+     * @param  op1  the first optional value
+     * @param  op2  the second optional value
+     * @param  op3  the third optional value
+     * @param  op4  the fourth optional value
+     * @param  op5  the fifth optional value
+     * @return      true if any of the optional values are empty, false otherwise
+     */
+    public static boolean anyEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4,  final Optional<?> op5) {
+        return op1.isEmpty() || op2.isEmpty() || op3.isEmpty() || op4.isEmpty() || op5.isEmpty();
+    }
+    /**
+     * Determines if any of the given optional values are empty.
+     *
+     * @param  op1  the first optional value
+     * @param  op2  the second optional value
+     * @param  op3  the third optional value
+     * @param  op4  the fourth optional value
+     * @param  op5  the fifth optional value
+     * @param  op6  the sixth optional value
+     * @return      true if any of the optional values are empty, false otherwise
+     */
+    public static boolean anyEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6) {
+        return op1.isEmpty() || op2.isEmpty() || op3.isEmpty() || op4.isEmpty() || op5.isEmpty() || op6.isEmpty();
+    }
+    /**
+     * Checks if any of the given Optional objects are empty.
+     *
+     * @param  op1 the first Optional object
+     * @param  op2 the second Optional object
+     * @param  op3 the third Optional object
+     * @param  op4 the fourth Optional object
+     * @param  op5 the fifth Optional object
+     * @param  op6 the sixth Optional object
+     * @param  op7 the seventh Optional object
+     * @return true if any of the Optional objects is empty, false otherwise
+     */
+    public static boolean anyEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7) {
+        return op1.isEmpty() || op2.isEmpty() || op3.isEmpty() || op4.isEmpty() || op5.isEmpty() || op6.isEmpty() || op7.isEmpty();
+    }
+    /**
+     * A function that checks if any of the given Optional parameters are empty.
+     *
+     * @param  op1  the first Optional parameter
+     * @param  op2  the second Optional parameter
+     * @param  op3  the third Optional parameter
+     * @param  op4  the fourth Optional parameter
+     * @param  op5  the fifth Optional parameter
+     * @param  op6  the sixth Optional parameter
+     * @param  op7  the seventh Optional parameter
+     * @param  op8  the eighth Optional parameter
+     * @return      true if any of the Optional parameters are empty, false otherwise
+     */
+    public static boolean anyEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8) {
+        return op1.isEmpty() && op2.isEmpty() && op3.isEmpty() && op4.isEmpty() && op5.isEmpty() && op6.isEmpty() && op7.isEmpty() &&
+                op8.isEmpty();
+    }
+    /**
+     * Checks if any of the given Optional objects is empty.
+     *
+     * @param  op1  the first Optional object to check
+     * @param  op2  the second Optional object to check
+     * @param  op3  the third Optional object to check
+     * @param  op4  the fourth Optional object to check
+     * @param  op5  the fifth Optional object to check
+     * @param  op6  the sixth Optional object to check
+     * @param  op7  the seventh Optional object to check
+     * @param  op8  the eighth Optional object to check
+     * @param  op9  the ninth Optional object to check
+     * @return      true if any of the given Optional objects is empty, false otherwise
+     */
+    public static boolean anyEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8, final Optional<?> op9) {
+        return op1.isEmpty() && op2.isEmpty() && op3.isEmpty() && op4.isEmpty() && op5.isEmpty() && op6.isEmpty() && op7.isEmpty() &&
+                op8.isEmpty() && op9.isEmpty();
+    }
+    /**
+     * Checks if any of the given Optional parameters are empty.
+     *
+     * @param  op1	Optional parameter 1
+     * @param  op2	Optional parameter 2
+     * @param  op3	Optional parameter 3
+     * @param  op4	Optional parameter 4
+     * @param  op5	Optional parameter 5
+     * @param  op6	Optional parameter 6
+     * @param  op7	Optional parameter 7
+     * @param  op8	Optional parameter 8
+     * @param  op9	Optional parameter 9
+     * @param  op10	Optional parameter 10
+     * @return     	true if any of the given Optional parameters are empty, false otherwise
+     */
+    public static boolean anyEmpty(final Optional<?> op1, final Optional<?> op2, final Optional<?> op3, final Optional<?> op4, final Optional<?> op5,
+                                     final Optional<?> op6, final Optional<?> op7, final Optional<?> op8, final Optional<?> op9, final Optional<?> op10) {
+        return op1.isEmpty() && op2.isEmpty() && op3.isEmpty() && op4.isEmpty() && op5.isEmpty() && op6.isEmpty() && op7.isEmpty() &&
+                op8.isEmpty() && op9.isEmpty() && op10.isEmpty();
+    }
+    /**
+     * Checks if any of the given Optional objects are empty.
+     *
+     * @param  optionals  an array of Optional objects to be checked
+     * @return            true if any of the Optional objects are empty, false otherwise
+     */
+    public static boolean anyEmpty(final Optional<?> ... optionals) {
+        return Arrays.stream(optionals).anyMatch(Optional::isEmpty);
+    }
+
+}
