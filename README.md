@@ -14,7 +14,7 @@ to isolate digits in String objects and to capitalize String object (all lowerca
 ## Optionals class
 Contains utility methods to check for presence or emptiness in any number of optionals.
 
-# Bools class
+## Bools class
 Contains utility methods to perform logical operations on any number of boolean values.
 
 ## Nulls class
