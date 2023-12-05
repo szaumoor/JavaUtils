@@ -1,6 +1,7 @@
 package com.szaumoor.utils;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  *  This is a utility class that provides functions designed to test String objects in various ways.
@@ -242,6 +243,31 @@ public enum Strings {
         return str.replaceAll("\\D", "");
     }
 
+
+    /**
+     * Removes all non-alphanumeric characters from the given string.
+     *
+     * @param  str  the string to remove non-alphanumeric characters from
+     * @return      the string with non-alphanumeric characters removed
+     */
+    public static String removeNonAlphanumericChars(final String str) {
+        return str.replaceAll("[^a-zA-Z0-9]", "");
+    }
+
+    /**
+     * Counts how many occurrences of a substring exist within a given string.
+     *
+     * @param  str    the original string
+     * @param  sub    the substring to count
+     * @return        the number of occurrences within the string
+     */
+    public static int countSubstring(final String str, final String sub) {
+        int sizeOfWord = sub.length();
+        int sizeOfOriginal = str.length();
+        final String replaced = str.replace(sub, "");
+        return (sizeOfOriginal - replaced.length()) / sizeOfWord;
+    }
+
     /**
      * Capitalizes the first letter of a given string and converts the remaining letters to lowercase.
      *
@@ -250,5 +276,15 @@ public enum Strings {
      */
     public static String capitalize(final String str) {
         return str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase();
+    }
+
+    /**
+     * Reverses the given string.
+     *
+     * @param  str  the string to be reversed
+     * @return      the reversed string
+     */
+    public static String reverse(final String str) {
+        return new StringBuilder(str).reverse().toString();
     }
 }
