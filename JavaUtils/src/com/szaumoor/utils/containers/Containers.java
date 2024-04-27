@@ -1,7 +1,9 @@
 package com.szaumoor.utils.containers;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Utility class that provides functions for Java Collections and arrays
@@ -158,6 +160,18 @@ public final class Containers {
             newArray[i] = array[j];
         }
         return newArray;
+    }
+
+    /**
+     * Reverses the content of the array and returns it as a {@link List} containing
+     * those elements.
+     *
+     * @param array Array from which to take the elements to be reversed.
+     * @return A {@link List} containing the elements in reverse order.
+     * @param <T> The type of elements in the array
+     */
+    public static <T> List<T> reverseIntoList(final T [] array) {
+        return reversed(Arrays.stream(array).collect(Collectors.toList()));
     }
 
     /**
