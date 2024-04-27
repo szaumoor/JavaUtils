@@ -170,8 +170,8 @@ public final class Containers {
      * @return A {@link List} containing the elements in reverse order.
      * @param <T> The type of elements in the array
      */
-    public static <T> List<T> reverseIntoList(final T [] array) {
-        return reversed(Arrays.stream(array).collect(Collectors.toList()));
+    public static <T> List<T> reversed(final T[] array) {
+        return reversed(Arrays.asList(array));
     }
 
     /**
@@ -186,5 +186,17 @@ public final class Containers {
     public static <T> List<T> shuffled(final List<T> list) {
         Collections.shuffle(list);
         return list;
+    }
+
+    /**
+     * Shuffles the content of the array and returns it as a {@link List} containing
+     * those elements.
+     *
+     * @param array Array from which to take the elements to be shuffled.
+     * @return A {@link List} containing the elements in a shuffled order.
+     * @param <T> The type of elements in the array
+     */
+    public static <T> List<T> shuffled(final T[] array) {
+        return shuffled(Arrays.asList(array));
     }
 }
