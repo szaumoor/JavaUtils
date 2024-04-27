@@ -74,5 +74,4 @@ public final class Properties {
         return System.getProperty("os.name");
     }
 
-
 }

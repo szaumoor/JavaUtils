@@ -99,4 +99,19 @@ public final class Numbers {
             return OptionalLong.empty();
         }
     }
+
+    /**
+     * Reduces the number of decimal points in a double number. Any value below 0 will return the original number.
+     * No rounding of any kind is done, this function simply "deletes" the remaining digits. It has no effect
+     * if the number has fewer decimal points than the requested reduction.
+     *
+     * @param number The number that needs the reduction
+     * @param decimalPoints The number of decimal points that should be preserved only
+     * @return The number with the number of decimals required.
+     */
+    public static double reduceDecimalPoints(final double number, final int decimalPoints) {
+        if(decimalPoints < 0) return number;
+        double pow = Math.pow(10, decimalPoints);
+        return Math.floor(number * pow) / pow;
+    }
 }

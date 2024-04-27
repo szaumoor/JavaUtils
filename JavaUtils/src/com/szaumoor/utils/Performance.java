@@ -1,6 +1,6 @@
 package com.szaumoor.utils;
 
-import java.text.DecimalFormat;
+import com.szaumoor.utils.datatypes.Numbers;
 
 /**
  * Utility class for performance measurements with nanosecond precision as per {@link System#nanoTime()}
@@ -10,11 +10,7 @@ public final class Performance {
     private Performance() {
         throw new AssertionError("Utility class");
     }
-    private static final DecimalFormat decimalFormat = new DecimalFormat();
 
-    static {
-        decimalFormat.setMaximumFractionDigits(3);
-    }
 
     /**
      * Calculates the time taken to execute the given runnable, returning the nanoseconds.
@@ -45,6 +41,6 @@ public final class Performance {
      * @return the number of seconds it takes to execute the runnable
      */
     public static double seconds(final Runnable runnable) {
-        return Double.parseDouble(decimalFormat.format(millis(runnable) / 1000.0));
+        return Numbers.reduceDecimalPoints(millis(runnable) / 1000.0, 3);
     }
 }
