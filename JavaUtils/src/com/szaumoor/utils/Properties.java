@@ -4,7 +4,7 @@ import java.io.File;
 import java.nio.file.Path;
 
 /**
- * Utility class to return convenient data from the system
+ * Utility class to return convenient data from the system without having to remember Strings.
  */
 public final class Properties {
     private Properties() {
