@@ -16,7 +16,7 @@ public final class Optionals {
      * @param  opInt  the OptionalInt to box
      * @return          an Optional<Integer> containing the boxed value
      */
-    public Optional<Integer> boxInt(final OptionalInt opInt) {
+    public static Optional<Integer> boxInt(final OptionalInt opInt) {
         return opInt.stream().boxed().findFirst();
     }
 
@@ -26,7 +26,7 @@ public final class Optionals {
      * @param  integer  the Optional<Integer> to be unboxed
      * @return          an OptionalInt containing the unboxed value, or an empty OptionalInt if the input is empty
      */
-    public OptionalInt unboxInt(final Optional<Integer> integer) {
+    public static OptionalInt unboxInt(final Optional<Integer> integer) {
         return integer.stream().mapToInt(i -> i).findFirst();
     }
 
@@ -36,7 +36,7 @@ public final class Optionals {
      * @param  opLong  the OptionalLong to box
      * @return          an Optional<Long> containing the boxed value
      */
-    public Optional<Long> boxLong(final OptionalLong opLong) {
+    public static Optional<Long> boxLong(final OptionalLong opLong) {
         return opLong.stream().boxed().findFirst();
     }
 
@@ -46,7 +46,7 @@ public final class Optionals {
      * @param  opLong  the Optional<Long> to be unboxed
      * @return          an OptionalLong containing the unboxed value, or an empty OptionalInt if the input is empty
      */
-    public OptionalLong unboxLong(final Optional<Long> opLong) {
+    public static OptionalLong unboxLong(final Optional<Long> opLong) {
         return opLong.stream().mapToLong(l -> l).findFirst();
     }
 
@@ -56,7 +56,7 @@ public final class Optionals {
      * @param  opDouble  the OptionalDouble to box
      * @return          an Optional<Double> containing the boxed value
      */
-    public Optional<Double> boxDouble(final OptionalDouble opDouble) {
+    public static Optional<Double> boxDouble(final OptionalDouble opDouble) {
         return opDouble.stream().boxed().findFirst();
     }
 
@@ -66,7 +66,7 @@ public final class Optionals {
      * @param  opDouble  the Optional<Long> to be unboxed
      * @return          an OptionalDouble containing the unboxed value, or an empty OptionalDouble if the input is empty
      */
-    public OptionalDouble unboxDouble(final Optional<Double> opDouble) {
+    public static OptionalDouble unboxDouble(final Optional<Double> opDouble) {
         return opDouble.stream().mapToDouble(d -> d).findFirst();
     }
 

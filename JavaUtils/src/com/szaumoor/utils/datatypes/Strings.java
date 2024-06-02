@@ -387,7 +387,8 @@ public final class Strings {
 
     /**
      * Joins the elements in a list of CharSequence objects to create a String
-     * without a delimiter.
+     * without a delimiter. It exists only for the convenience of using a non-delimited join
+     * with only one argument.
      *
      * @param elements The elements to join in a String.
      * @return The joined String.
@@ -405,5 +406,56 @@ public final class Strings {
      */
     public static String join(final CharSequence... elements) {
         return java.lang.String.join("", elements);
+    }
+
+    /**
+     * Retrieves the last character in a String. It will throw
+     * and index out of bounds exception for Strings with length == 0.
+     * This method exists mostly because I got tired of typing length() - 1,
+     * and this is more expressive.
+     *
+     * @param string The String to get the last character from.
+     * @return the char at the last position of the string
+     */
+    public static char lastAsChar(final String string) {
+        return string.charAt(string.length() - 1);
+    }
+
+    /**
+     * Retrieves the last character in a String. It will throw
+     * and index out of bounds exception for Strings with length == 0.
+     * It will retrieve it as a String object.
+     * This method exists mostly because I got tired of typing length() - 1,
+     * and this is more expressive.
+     *
+     * @param string The String to get the last character from.
+     * @return the String representing the last character of the string
+     */
+    public static String lastAsString(final String string) {
+        return String.valueOf(lastAsChar(string));
+    }
+
+    /**
+     * Deletes the last character inside a StringBuilder.
+     * Useful sometimes when constructing delimited chains
+     * of characters in a loop. It exists only to provide a more readable syntax.
+     *
+     * @param builder The StringBuilder
+     * @return the StringBuilder instance
+     */
+    public static StringBuilder deleteLast(final StringBuilder builder) {
+        return builder.deleteCharAt(builder.length() - 1);
+    }
+
+    /**
+     * Deletes the last character inside a StringBuffer.
+     * Useful sometimes when constructing delimited chains
+     * of characters in a loop. It exists only to provide a more readable syntax.
+     *
+     * @param builder The StringBuffer
+     * @return the StringBuffer instance
+     */
+    public static StringBuffer deleteLast(final StringBuffer builder) {
+        return builder.deleteCharAt(builder.length() - 1);
     }
 }

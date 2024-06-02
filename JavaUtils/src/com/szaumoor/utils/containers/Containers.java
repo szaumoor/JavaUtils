@@ -3,7 +3,6 @@ package com.szaumoor.utils.containers;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Utility class that provides functions for Java Collections and arrays
@@ -198,5 +197,105 @@ public final class Containers {
      */
     public static <T> List<T> shuffled(final T[] array) {
         return shuffled(Arrays.asList(array));
+    }
+
+    /**
+     * Retrieves the last item in a list.
+     * @param list The list
+     * @return The last item of the list
+     * @param <T> The type of object
+     */
+    public static <T> T last(final List<T> list) {
+        return list.get(list.size() - 1);
+    }
+
+    /**
+     * Retrieves the last item in an array.
+     * @param array The array
+     * @return The last item of the array
+     * @param <T> The type of object
+     */
+    public static <T> T last(final T[] array) {
+        return array[array.length - 1];
+    }
+
+    /**
+     * Returns the last item of the array.
+     *
+     * @param array The array
+     * @return The last item of the array
+     */
+    public static int last(final int[] array) {
+        return array[array.length - 1];
+    }
+
+    /**
+     * Returns the last item of the array.
+     *
+     * @param array The array
+     * @return The last item of the array
+     */
+    public static double last(final double[] array) {
+        return array[array.length - 1];
+    }
+
+    /**
+     * Returns the last item of the array.
+     *
+     * @param array The array
+     * @return The last item of the array
+     */
+    public static float last(final float[] array) {
+        return array[array.length - 1];
+    }
+
+    /**
+     * Returns the last item of the array.
+     *
+     * @param array The array
+     * @return The last item of the array
+     */
+    public static long last(final long[] array) {
+        return array[array.length - 1];
+    }
+
+    /**
+     * Returns the last item of the array.
+     *
+     * @param array The array
+     * @return The last item of the array
+     */
+    public static short last(final short[] array) {
+        return array[array.length - 1];
+    }
+
+    /**
+     * Returns the last item of the array.
+     *
+     * @param array The array
+     * @return The last item of the array
+     */
+    public static byte last(final byte[] array) {
+        return array[array.length - 1];
+    }
+
+    /**
+     * Returns the last item of the array.
+     *
+     * @param array The array
+     * @return The last item of the array
+     */
+    public static boolean last(final boolean[] array) {
+        return array[array.length - 1];
+    }
+
+    /**
+     * Returns the last item of the array.
+     *
+     * @param array The array
+     * @return The last item of the array
+     */
+    public static char last(final char[] array) {
+        return array[array.length - 1];
     }
 }

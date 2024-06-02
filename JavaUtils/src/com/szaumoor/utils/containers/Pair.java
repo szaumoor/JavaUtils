@@ -26,7 +26,7 @@ public record Pair<T, S>(T first, S second) {
      * @param <T>    The type of the first object
      * @param <S>    The type of the second object
      */
-    public static <T, S> Pair<T, S> of(T first, S second) {
+    public static <T, S> Pair<T, S> of(final T first, final S second) {
         return new Pair<>(
                 requireNonNull(first),
                 requireNonNull(second)
