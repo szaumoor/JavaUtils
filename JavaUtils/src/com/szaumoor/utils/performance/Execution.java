@@ -68,8 +68,7 @@ public final class Execution {
     }
 
     /**
-     *
-     * Obtains the total, average, maximum, and minimum duration in the execution of a particular
+     * Gets the total, average, maximum, and minimum duration in the execution of a particular
      * Runnable, according to a particular unit of time. Only NANOS, MILLIS, and SECONDS are supported;
      * others will throw an exception.
      *
@@ -81,7 +80,6 @@ public final class Execution {
      */
     public static PerformanceReport performance(final Runnable runnable, int runs, final ChronoUnit timeUnit) {
         if (runs < 2) throw new IllegalArgumentException("At least two runs are expected");
-        if (isNull(runnable)) throw new NullPointerException("Null runnable!");
         if (timeUnit != NANOS  && timeUnit != MILLIS && timeUnit != SECONDS)  throw new IllegalArgumentException("Unsupported ChronoUnits used.");
 
         long firstRun = nanosOf(runnable);
@@ -107,8 +105,6 @@ public final class Execution {
             default -> throw new IllegalArgumentException("Unit is unsupported");
         };
     }
-
-
 
     private static BigDecimal nanosToMillis(final BigDecimal avgNanos) {
         return avgNanos.divide(BigDecimal.valueOf(NANOS_TO_MILLIS_MAG), MathContext.DECIMAL128);

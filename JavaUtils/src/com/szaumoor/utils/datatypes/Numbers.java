@@ -46,7 +46,7 @@ public final class Numbers {
 
 
     /**
-     * Checks if the given string is a decimal number.
+     * Checks if the given string is a number. It delegates to the BigDecimal constructor to decide this.
      *
      * @param str the string to be checked
      * @return true if the string is a number, false otherwise
@@ -171,7 +171,7 @@ public final class Numbers {
 
     /**
      * Checks that a number is between an origin (inclusive) and a bound (exclusive).
-     * Exists to provide an expressive syntax for common bounds checks.
+     * Exists to provide an expressive syntax for bound checking.
      *
      * @param origin Origin (inclusive)
      * @param number The number to be checked
@@ -299,27 +299,83 @@ public final class Numbers {
         return !between(origin, number, boundExclusive);
     }
 
+    /**
+     *  Returns the total of a collection of BigDecimal numbers.
+     *
+     * @param numbers Collection of BigDecimal numbers
+     * @return The total of the numbers as a BigDecimal
+     */
     public static BigDecimal sumDecimals(final Collection<BigDecimal> numbers) {
         return numbers.stream().reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
+    /**
+     *  Returns the total of a collection of BigInteger numbers.
+     *
+     * @param numbers Collection of BigInteger numbers
+     * @return The total of the numbers as a BigInteger
+     */
     public static BigInteger sumIntegers(final Collection<BigInteger> numbers) {
         return numbers.stream().reduce(BigInteger.ZERO, BigInteger::add);
     }
 
+    /**
+     * Calculates the average in a collection of BigDecimal numbers.
+     *
+     * @param numbers Collection of BigDecimal numbers
+     * @return The average of the numbers as a BigDecimal
+     */
     public static BigDecimal averageOfDecimals(final Collection<BigDecimal> numbers) {
         return sumDecimals(numbers).divide(BigDecimal.valueOf(numbers.size()), MathContext.DECIMAL128);
     }
 
+    /**
+     * Calculates the average in a collection of BigInteger numbers.
+     *
+     * @param numbers Collection of BigInteger numbers
+     * @return The average of the numbers as a BigDecimal
+     */
     public static BigDecimal averageOfIntegers(final Collection<BigInteger> numbers) {
         return new BigDecimal(sumIntegers(numbers)).divide(BigDecimal.valueOf(numbers.size()), MathContext.DECIMAL128);
     }
 
-    public static BigDecimal max(final Collection<BigDecimal> numbers) {
+    /**
+     * Extracts the maximum value from a collection of BigDecimal numbers.
+     *
+     * @param numbers Collection of BigDecimal numbers
+     * @return The maximum value as a BigDecimal
+     */
+    public static BigDecimal maxDecimals(final Collection<BigDecimal> numbers) {
         return numbers.stream().max(BigDecimal::compareTo).orElseThrow();
     }
 
-    public static BigDecimal min(final Collection<BigDecimal> numbers) {
+    /**
+     * Extracts the minimum value from a collection of BigDecimal numbers.
+     *
+     * @param numbers Collection of BigDecimal numbers
+     * @return The minimum value as a BigDecimal
+     */
+    public static BigDecimal minDecimals(final Collection<BigDecimal> numbers) {
         return numbers.stream().min(BigDecimal::compareTo).orElseThrow();
+    }
+
+    /**
+     * Extracts the maximum value from a collection of BigInteger numbers.
+     *
+     * @param numbers Collection of BigInteger numbers
+     * @return The maximum value as a BigInteger
+     */
+    public static BigInteger maxInts(final Collection<BigInteger> numbers) {
+        return numbers.stream().max(BigInteger::compareTo).orElseThrow();
+    }
+
+    /**
+     * Extracts the minimum value from a collection of BigInteger numbers.
+     *
+     * @param numbers Collection of BigInteger numbers
+     * @return The minimum value as a BigInteger
+     */
+    public static BigInteger minInts(final Collection<BigInteger> numbers) {
+        return numbers.stream().min(BigInteger::compareTo).orElseThrow();
     }
 }

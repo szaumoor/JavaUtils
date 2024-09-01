@@ -30,7 +30,7 @@ public final class Exceptions {
      *
      * @param objects Objects to test
      * @param condition Condition to test for
-     * @param exception The RuntimeException that the method should throw is needed.
+     * @param exception The RuntimeException that the method should throw if needed.
      * @param <T> The type of the object
      */
     public static <T> void throwIfAny(final Collection<T> objects, final Predicate<T> condition, final RuntimeException exception) {

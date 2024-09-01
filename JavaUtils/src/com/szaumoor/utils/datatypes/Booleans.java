@@ -627,8 +627,13 @@ public final class Booleans {
      */
     public static boolean oneTrue(final boolean... bools) {
         var count = 0;
-        for (var bool : bools) if (bool) count++;
-        return count == 1;
+        for (var bool : bools) {
+            if (bool) {
+                count++;
+                if (count > 1) return false;
+            }
+        }
+        return true;
     }
 
     /**
@@ -640,8 +645,13 @@ public final class Booleans {
      */
     public static boolean oneFalse(final boolean... bools) {
         var count = 0;
-        for (var bool : bools) if (!bool) count++;
-        return count == 1;
+        for (final var bool : bools) {
+            if (!bool) {
+                count++;
+                if (count > 1) return false;
+            }
+        }
+        return true;
     }
 
     /**

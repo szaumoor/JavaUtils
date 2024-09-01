@@ -417,7 +417,7 @@ public final class Strings {
      * @param string The String to get the last character from.
      * @return the char at the last position of the string
      */
-    public static char lastAsChar(final String string) {
+    public static char lastChar( final String string) {
         return string.charAt(string.length() - 1);
     }
 
@@ -431,8 +431,8 @@ public final class Strings {
      * @param string The String to get the last character from.
      * @return the String representing the last character of the string
      */
-    public static String lastAsString(final String string) {
-        return String.valueOf(lastAsChar(string));
+    public static String lastStr( final String string) {
+        return String.valueOf( lastChar(string));
     }
 
     /**

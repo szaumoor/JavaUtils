@@ -8,7 +8,7 @@ import java.nio.file.Path;
 import static java.lang.System.getProperty;
 
 /**
- * Utility class to return convenient data from the system without having to remember Strings.
+ * Utility class to return convenient data from the system without having to remember property Strings.
  */
 public final class SysProperties {
     private SysProperties() {
