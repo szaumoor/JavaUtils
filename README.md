@@ -2,6 +2,8 @@
 A collection of various utility functions that I've found were missing in the Java SDK as it stands now in Java 17, or that I find myself using often.
 Many don't encapsulate a particularly difficult or verbose operation, but they provide, regardless, an expressive way of performing an operation in code.
 
+This was inspired by my degree's end project, as I found many of the functions I needed were functions I needed in other projects too.
+
 # How to use
 You can use it in your project by importing the given JAR in the releases section, or download the source code and use it as you see fit.
 
